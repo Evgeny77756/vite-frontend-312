@@ -24,9 +24,35 @@ a,
     background-color: transparent;
 }
 
+button,
+a,
 .btn-icon {
-    cursor: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.8rem; /* вертикальный внутренний отступ */
+    padding-inline-end: 1rem; /* отступ справа от текста по макету */
+    -webkit-padding-end: 1rem; /* Safari, old Chrome */
+    -webkit-padding-start: 1rem; /* Safari, old Chrome */
+    padding-inline-start: 1rem; /* внутренний отступ по горизонтали */
+    border: 2px solid transparent;
+    outline: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: var(--title-color);
+    max-inline-size: 20rem;
+    min-width: 12rem; /* текст в два слова */
+    min-height: 4rem;
+    max-height: 4rem;
+    background-color: transparent;
+}
+
+.btn-icon {
     min-width: 4rem;
+    cursor: auto;
 }
 
 button img,
@@ -54,9 +80,10 @@ a:focus {
     transition: border 0.3s ease-in-out;
 }
 
-/* [data-variant="primary"] [data-icon="icon"] {
-  margin-left: 1.4rem;
-} */
+a.active {
+    border: var(--link-border-focus);
+    color: var(--link-title-hover);
+}
 
 /*****************************************************************   */
 
@@ -122,7 +149,6 @@ a:focus {
     background-color: var(--button-button-secondary);
     border: 0.2rem solid var(--button-button-secondary);
     color: var(--text-text-on-color);
-    cursor: pointer;
 }
 
 [data-variant="secondary"] path {
@@ -205,7 +231,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--button-button-danger-primary);
     color: var(--button-button-danger-primary);
-    cursor: pointer;
 }
 
 [data-variant="danger-tertiary"] path {
@@ -258,7 +283,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--background-background);
     color: var(--link-link-primary);
-    cursor: pointer;
 }
 
 [data-variant="ghost"] path {
@@ -293,7 +317,6 @@ a:focus {
     background-color: var(--background-background);
     border: 0.2rem solid var(--background-background);
     color: var(--button-button-danger-primary);
-    cursor: pointer;
 }
 
 [data-variant="danger-ghost"] path {
@@ -338,4 +361,26 @@ a:focus {
 [data-variant="ghost"][disabled] path,
 [data-variant="danger-ghost"][disabled] path {
     fill: var(--button-button-disabled);
+}
+
+/* иконки закрытия в модалках  */
+.modal .btn-icon {
+    justify-content: center;
+    cursor: auto;
+    min-width: 4rem;
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+}
+
+.modal .btn-icon:hover,
+.modal .btn-icon:focus {
+    background-color: var(--background-background-hover);
+}
+
+.modal .btn-icon path {
+    fill: var(--title-color);
 }
