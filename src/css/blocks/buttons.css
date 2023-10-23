@@ -24,32 +24,6 @@ a,
     background-color: transparent;
 }
 
-button,
-a,
-.btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-block: 0.8rem; /* вертикальный внутренний отступ */
-    padding-inline-end: 1rem; /* отступ справа от текста по макету */
-    -webkit-padding-end: 1rem; /* Safari, old Chrome */
-    -webkit-padding-start: 1rem; /* Safari, old Chrome */
-    padding-inline-start: 1rem; /* внутренний отступ по горизонтали */
-    border: 2px solid transparent;
-    outline: 0;
-    margin: 0;
-    box-sizing: border-box;
-    cursor: pointer;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: var(--title-color);
-    max-inline-size: 20rem;
-    min-width: 12rem; /* текст в два слова */
-    min-height: 4rem;
-    max-height: 4rem;
-    background-color: transparent;
-}
-
 .btn-icon {
     min-width: 4rem;
     cursor: auto;
