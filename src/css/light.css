@@ -5,29 +5,23 @@
     --title-color: #161616;
     /* цвет подзаголовков */
     --subtitle-color: #42526b;
-
     /*  blue color */
     --cds-blue-400: #0f62fe;
     --cds-blue-500: #0353e9;
-
     /* grey color */
     --cds-grey-400: #525252;
     --cds-grey-500: #8d8d8d;
-
     /* Background */
     --background-background: #ffffff;
     --background-background-hover: #e5e5e5;
-
     /* Text */
     --text-text-primary: #161616;
     --text-text-tertiary: #ffffff;
     --text-text-on-color: #ffffff; /* Text on interactive colors; Text on button colors */
     --text-text-on-color-disabled: #8d8d8d; /* Disabled color for --text-text-on-color */
     --text-text-disabled: #c6c6c6;
-
     /* Link */
     --link-link-primary: #0f62fe;
-
     /* Button */
     --button-button-primary: #0f62fe;
     --button-button-primary-hover: #0353e9;
@@ -38,33 +32,26 @@
     --button-button-danger-primary: #da1e28;
     --button-button-danger-hover: #ba1b23;
     --button-button-disabled: #c6c6c6;
-
     /* Focus */
     --focus-focus: #0f62fe;
     --focus-box-shadow: 0px 0px 0px 0.1rem #ffffff inset;
-
     /* cards background */
     --cards-bgc: #f4f4f4;
 }
-
 /* logo */
 .header-logo svg {
     --logo-fill: #161616;
 }
-
 /* links */
 a {
     --link-color-default: #525252;
     --link-border-default: 2px solid #e0e0e0;
-
     /* состояние hover */
     --link-title-hover: #161616;
     --link-border-hover: #8d8d8d;
-
     /* состояние focus */
     --link-border-focus: 2px solid #0f62fe;
 }
-
 /* forms */
 input[type="text"],
 input[type="email"],
@@ -113,12 +100,10 @@ textarea:disabled {
     --input-bg-color-disabled: #f4f4f4;
     --input-color-disabled: #c6c6c6;
 }
-
 /* текст с ошибкой */
 .input-error {
     --text-color: #da1e28;
 }
-
 /* модалка */
 dialog {
     --modal-bgc: #f4f4f4; /* цвет фона */
@@ -126,4 +111,8 @@ dialog {
 
 dialog::backdrop {
     --modal-overlay: rgba(22, 22, 22, 0.5); /* оверлей */
+}
+
+.skeleton::before {
+    --skeleton-gradient: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
 }
