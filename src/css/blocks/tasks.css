@@ -59,7 +59,7 @@
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
   opacity: 0.2;
-  content: "";
+  content: '';
   display: block;
   pointer-events: none;
   position: absolute;
@@ -70,10 +70,10 @@
 }
 
 .card-link {
-  display: block;
-  height: 100%;
-  max-width: 100%;
+  display: inline-block;
   width: 100%;
+  max-width: 100%;
+  min-height: 100%;
   position: absolute;
   background: transparent;
   z-index: 1;
@@ -88,7 +88,7 @@
   fill: rgb(0 0 0 / 50%);
   height: 2.4rem;
   width: 2.4rem;
-  stroke: #ffffff;
+  stroke: #fff;
   stroke-width: 1.4;
   vertical-align: middle;
   position: absolute;
@@ -191,18 +191,12 @@
   justify-content: flex-end;
 }
 
-.card-bottom [data-variant="primary"] {
+.card-bottom [data-variant='primary'] {
   flex: 1;
   max-height: 100%;
 }
 
-.tasks-heart {
-  width: 24px;
-  z-index: 3;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
+/* pagination dynamic cards */
 
 /* skeleton */
 .skeleton {
@@ -211,7 +205,7 @@
 }
 
 .skeleton::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -286,7 +280,7 @@
     min-height: 4.8rem;
   }
 
-  .card-bottom [data-btn="primary"] {
+  .card-bottom [data-btn='primary'] {
     max-width: 100%;
   }
 }
