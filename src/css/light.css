@@ -1,6 +1,6 @@
 :root {
   /* общий фон */
-  --body-color: #fff;
+  --body-color: #ffffff;
 
   /* цвет заголовков */
   --title-color: #161616;
@@ -17,13 +17,13 @@
   --cds-grey-500: #8d8d8d;
 
   /* Background */
-  --background-background: #fff;
+  --background-background: #ffffff;
   --background-background-hover: #e5e5e5;
 
   /* Text */
   --text-text-primary: #161616;
-  --text-text-tertiary: #fff;
-  --text-text-on-color: #fff; /* Text on interactive colors; Text on button colors */
+  --text-text-tertiary: #ffffff;
+  --text-text-on-color: #ffffff; /* Text on interactive colors; Text on button colors */
   --text-text-on-color-disabled: #8d8d8d; /* Disabled color for --text-text-on-color */
   --text-text-disabled: #c6c6c6;
 
@@ -43,7 +43,7 @@
 
   /* Focus */
   --focus-focus: #0f62fe;
-  --focus-box-shadow: 0 0 0 0.1rem #fff inset;
+  --focus-box-shadow: 0 0 0 0.1rem #ffffff inset;
 
   /* cards background */
   --cards-bgc: #f4f4f4;
@@ -68,13 +68,13 @@ a {
 }
 
 /* forms */
-input[type='text'],
-input[type='email'],
-input[type='password'],
-input[type='tel'],
-input[type='number'],
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
 textarea {
-  --input-bg-color: #fff;
+  --input-bg-color: #ffffff;
   --input-border-default: 1px solid #8d8d8d;
   --input-text-color: #161616;
   --input-placeholder-color: #a8a8a8;
@@ -84,33 +84,33 @@ label {
   --input-label-color: #525252;
 }
 
-label[data-label='disabled'] {
+label[data-label="disabled"] {
   --label-color-disabled: #c6c6c6;
 }
 
-input[type='text']:hover,
-input[type='tel']:hover,
-input[type='password']:hover,
-input[type='email']:hover,
-input[type='number']:hover,
+input[type="text"]:hover,
+input[type="tel"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="number"]:hover,
 textarea:hover {
   --input-outline: 2px solid #0f62fe;
 }
 
-input[type='text']:focus,
-input[type='tel']:focus,
-input[type='password']:focus,
-input[type='email']:focus,
-input[type='number']:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
 textarea:focus {
   --input-outline: 2px solid #0f62fe;
 }
 
-input[type='text']:disabled,
-input[type='tel']:disabled,
-input[type='password']:disabled,
-input[type='email']:disabled,
-input[type='number']:disabled,
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="password"]:disabled,
+input[type="email"]:disabled,
+input[type="number"]:disabled,
 textarea:disabled {
   --input-bg-color-disabled: #f4f4f4;
   --input-color-disabled: #c6c6c6;
@@ -131,5 +131,5 @@ dialog::backdrop {
 }
 
 .skeleton::before {
-  --skeleton-gradient: linear-gradient(90deg, #eee, #f9f9f9, #eee);
+  --skeleton-gradient: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
 }

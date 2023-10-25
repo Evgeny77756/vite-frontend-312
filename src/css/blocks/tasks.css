@@ -59,7 +59,7 @@
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
   opacity: 0.2;
-  content: '';
+  content: "";
   display: block;
   pointer-events: none;
   position: absolute;
@@ -88,7 +88,7 @@
   fill: rgb(0 0 0 / 50%);
   height: 2.4rem;
   width: 2.4rem;
-  stroke: #fff;
+  stroke: #ffffff;
   stroke-width: 1.4;
   vertical-align: middle;
   position: absolute;
@@ -191,7 +191,7 @@
   justify-content: flex-end;
 }
 
-.card-bottom [data-variant='primary'] {
+.card-bottom [data-variant="primary"] {
   flex: 1;
   max-height: 100%;
 }
@@ -211,7 +211,7 @@
 }
 
 .skeleton::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -286,7 +286,7 @@
     min-height: 4.8rem;
   }
 
-  .card-bottom [data-btn='primary'] {
+  .card-bottom [data-btn="primary"] {
     max-width: 100%;
   }
 }
