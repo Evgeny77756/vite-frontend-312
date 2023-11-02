@@ -1,6 +1,6 @@
-import { data } from './data'
-import Swiper from 'swiper' // Инициализация слайдера
-import { Navigation, Pagination } from 'swiper/modules' // Инициализация иконок, пагинации и т.д.
+import { data } from "./data"
+import Swiper from "swiper" // Инициализация слайдера
+import { Navigation, Pagination } from "swiper/modules" // Инициализация иконок, пагинации и т.д.
 
 const GLOBAL = {
   currentPage: window.location.pathname,
@@ -8,11 +8,11 @@ const GLOBAL = {
 
 // Функция отрисовки карточек
 const renderData = () => {
-  const swiperWrapper = document.querySelector('.swiper-wrapper')
+  const swiperWrapper = document.querySelector(".swiper-wrapper")
 
   data.forEach(function (product) {
-    const div = document.createElement('div') // Создать дивку
-    div.classList.add('swiper-slide') // Добавить класс дивке
+    const div = document.createElement("div") // Создать дивку
+    div.classList.add("swiper-slide") // Добавить класс дивке
 
     div.innerHTML = `
     <div class="card-wrapper">
@@ -84,19 +84,19 @@ const renderData = () => {
     `
 
     swiperWrapper.appendChild(div) // Вставка сформированной дивки в swiperWrapper
-  })
+  });
 }
 
 function displayTasksDetails() {
-  const taskUrlId = window.location.search.split('=')[1] // извлекаем id из адресной строки
+  const taskUrlId = window.location.search.split("=")[1] // извлекаем id из адресной строки
 
   const details = data // получение данных из data
 
   const cardInfo = details.find(function (card) {
     return card.id === taskUrlId
-  })
+  });
 
-  const div = document.createElement('div')
+  const div = document.createElement("div")
 
   div.innerHTML = `
     <div class="details-flex">
@@ -113,7 +113,7 @@ function displayTasksDetails() {
                 <img src="${image}" alt="${cardInfo?.name}"></img>
               </div>`
               )
-              .join('')}
+              .join("")}
           </div>
           <div class="card-info">
             <svg class="details-heart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -141,22 +141,32 @@ function displayTasksDetails() {
     </div>
   `
 
-  document.querySelector('#tasks-details').appendChild(div)
+  document.querySelector("#tasks-details").appendChild(div)
 
   initTasksDetailsSwiper()
 }
 
 /* Слайдер tasks */
 function initTasksSwiper() {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination],
-    direction: 'horizontal',
+    direction: "horizontal",
     scrollbar: {
-      el: '.swiper-scrollbar',
+      el: ".swiper-scrollbar",
     },
-    slidesPerView: 4,
     loop: true,
     spaceBetween: 20,
+    breakpoints: {
+      425: {
+        slidesPerView: 1,
+      },
+      768: {
+        slidesPerView: 2,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    },
   })
 }
 
@@ -164,17 +174,17 @@ initTasksSwiper() // Вызов функции для инициализации
 
 /* Слайдер tasks-details */
 function initTasksDetailsSwiper() {
-  const swiper = new Swiper('.swiper', {
+  const swiper = new Swiper(".swiper", {
     modules: [Navigation, Pagination],
-    direction: 'horizontal',
+    direction: "horizontal",
     slidesPerView: 1,
     spaceBetween: 30,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
     },
   })
 }
@@ -182,31 +192,31 @@ function initTasksDetailsSwiper() {
 // Инициализация перехода по страницам
 function init() {
   switch (GLOBAL.currentPage) {
-    case '/tasks.html':
+    case "/tasks.html":
       renderData()
       break
-    case '/tasks-details.html':
+    case "/tasks-details.html":
       displayTasksDetails()
       break
   }
 }
 
-document.addEventListener('DOMContentLoaded', init)
+document.addEventListener("DOMContentLoaded", init)
 
 // Skeleton
-window.addEventListener('load', () => {
-  const skeletons = document.querySelectorAll('.skeleton')
+window.addEventListener("load", () => {
+  const skeletons = document.querySelectorAll(".skeleton")
 
   skeletons.forEach(function (element) {
-    element.classList.remove('skeleton')
-  })
+    element.classList.remove("skeleton")
+  });
 })
 
 // Иконки heart /
-const hearts = document.querySelectorAll('.card-heart')
+const hearts = document.querySelectorAll(".card-heart")
 
 hearts.forEach((heart) => {
-  heart.addEventListener('click', () => {
-    heart.classList.toggle('heart-active')
-  })
+  heart.addEventListener("click", () => {
+    heart.classList.toggle("heart-active")
+  });
 })
