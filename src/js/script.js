@@ -1,3 +1,5 @@
+import '../sass/clients.sass'
+
 import { Modal } from './components/modal'
 import Swiper from 'swiper' // Инициализация слайдера
 import { Navigation, Pagination } from 'swiper/modules' // Инициализация иконок, пагинации и т.д.
@@ -19,9 +21,6 @@ const swiper = new Swiper('.swiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // breakpoints: {
-  //     545: {},
-  // },
 })
 
 const inputText = document.querySelector('#register-username')
